@@ -32,7 +32,8 @@ public class ATP13 {
         double s3 = soma(recebe(), recebe());
         double s4 = soma(recebe(), recebe());
         double mediaFinal = media(s1, s2, s3, s4);
-        System.out.printf("A média final é: %.2f ", mediaFinal);
+        System.out.printf("A soma dos valores é: %.2f", (s1 + s2 + s3 + s4));
+        System.out.printf("\nA média final é: %.2f ", mediaFinal);
     }
 
     static void cabecalho(){

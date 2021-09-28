@@ -21,12 +21,21 @@ _ Ao final da execução do método main, exiba uma mensagem informando qual o v
 
 
 public class ATP13 {
-public static void main(String[] args) {
-    cabecalho();
-}
+    public static void main(String[] args) {
+        cabecalho();
+    }
 
-static void cabecalho(){
-    System.out.println("===== Cálculo de média =====");
-} 
-    
+    static void cabecalho(){
+        System.out.println("===== Cálculo de média =====");
+    } 
+
+    static int soma(int n1, int n2){
+        int resultado = n1 + n2;
+        return resultado;
+    }    
+
+    static double media(int n1, int n2, int n3, int n4){
+        double valoresMedia = (n1 + n2 + n3 + n4)/4;
+        return valoresMedia;
+    }
 }

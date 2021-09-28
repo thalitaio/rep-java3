@@ -16,10 +16,6 @@ _ Ao final da execução do método main, exiba uma mensagem informando qual o v
 
 */
 
-/**
- * ATP13
- */
-
 import java.util.Scanner;
 
 public class ATP13 {

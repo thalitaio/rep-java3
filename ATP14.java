@@ -14,10 +14,18 @@ _ Imprima o resultado das operações fora do metodo que realiza o cálculo.
 public class ATP14 {
     public static void main(String[] args) {
         cabecalho();
+        menu();
     }
 
     static void cabecalho(){
         System.out.println("===== Caculadora =====");
     } 
+
+    static void menu(){
+        System.out.println("\t 1-Soma");
+        System.out.println("\t 2-Subtração");
+        System.out.println("\t 3-Multiplicação");
+        System.out.println("\t 4-Divisão");
+    }
 }
 

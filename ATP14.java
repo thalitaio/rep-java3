@@ -15,6 +15,7 @@ _ Imprima o resultado das operações fora do metodo que realiza o cálculo.
 
 public class ATP14 {
     public static void main(String[] args) {
+
         cabecalho();
         menu();
         int opcao;       
@@ -22,8 +23,8 @@ public class ATP14 {
         selecionarMenu(opcao);
         
         while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4){
-            System.out.println("errou");
-            opcao = ler("Digite");
+            System.out.println("Opção inválida. Digite novamente. \n");
+            opcao = ler("Digite uma opção do menu");
         };
     }
 
@@ -52,22 +53,43 @@ public class ATP14 {
         switch(opcao){
             case 1:
             System.out.println(somar(n1, n2));
+            menu_validacao();
             break;
             case 2:
             System.out.println(subtrair(n1, n2));
+            menu_validacao();
             break;
             case 3:
             System.out.println(multiplicar(n1, n2));
+            menu_validacao();
             break;
             case 4:
             System.out.println(dividir(n1, n2));
+            menu_validacao();
             break;
         }
+    }
+
+    static void menu_validacao(){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Voltar ao menu ou sair (v/s): ");
+        char vs = sc.nextLine().toLowerCase().charAt(0);
+        
+        if(vs == 'v'){
+            menu();
+            selecionarMenu(ler("Escolha: "));
+        }
+        else{
+            System.out.println("Obrigada. Volte sempre (◠‿・)—☆");
+        }
+
     }
 
     static double somar (double n1, double n2){
         double soma = n1 + n2;
         return soma;
+
     } 
 
     static double subtrair (double n1, double n2){
@@ -84,5 +106,6 @@ public class ATP14 {
         double divisao = n1 / n2;
         return divisao;
     } 
+
 }
 

@@ -1,5 +1,5 @@
 
-*/*
+/*
 _ Construa um método que imprima uma mensagem para ser usada como cabeçalho da aplicação. A mensagem 
 deve exibir a mensagem “Cálculo de média”.
 _ Construa um método que receba dois parâmetros inteiros realize a soma dos dois valores armaze em 

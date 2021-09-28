@@ -19,23 +19,40 @@ _ Ao final da execução do método main, exiba uma mensagem informando qual o v
  * ATP13
  */
 
+import java.util.Scanner;
 
 public class ATP13 {
+
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         cabecalho();
+        
+        double s1 = soma(recebe(), recebe());
+        double s2 = soma(recebe(), recebe());
+        double s3 = soma(recebe(), recebe());
+        double s4 = soma(recebe(), recebe());
+        double mediaFinal = media(s1, s2, s3, s4);
+        System.out.printf("A média final é: %.2f ", mediaFinal);
     }
 
     static void cabecalho(){
         System.out.println("===== Cálculo de média =====");
     } 
 
-    static int soma(int n1, int n2){
-        int resultado = n1 + n2;
+    static double soma(double n1, double n2){
+        double resultado = n1 + n2;
         return resultado;
     }    
 
-    static double media(int n1, int n2, int n3, int n4){
+    static double media(double n1, double n2, double n3, double n4){
         double valoresMedia = (n1 + n2 + n3 + n4)/4;
         return valoresMedia;
     }
+
+    static double recebe(){
+        System.out.println("Digite um número: ");
+        double entrada = Double.parseDouble(sc.nextLine());
+        return entrada;
+    }
+
 }
